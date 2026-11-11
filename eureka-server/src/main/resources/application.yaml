@@ -1,0 +1,21 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    # Ten serwer Eureka NIE rejestruje samego siebie jako klienta w innym serwerze Eureka.
+    # Dla pojedynczego, standalone Eureka Server ustawiamy false.
+    register-with-eureka: false
+
+    # Ten serwer Eureka NIE pobiera listy zarejestrowanych usług
+    # z innego serwera Eureka.
+    # Dla pojedynczego, standalone Eureka Server również ustawiamy false.
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#        http://eureka2:8762/eureka/,
+#        http://eureka3:8763/eureka/

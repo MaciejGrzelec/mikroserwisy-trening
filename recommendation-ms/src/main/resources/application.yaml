@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: recommendation-ms
+
+    config:
+        import: configserver:http://localhost:8888
+
+    profiles:
+        active: prod
