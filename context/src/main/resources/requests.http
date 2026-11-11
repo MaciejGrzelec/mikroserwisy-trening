@@ -1,0 +1,36 @@
+### Dodanie usera z postami
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "nick_user": "kowalski",
+  "posts": [
+    {
+      "title": "Pierwszy post",
+      "content": "Treść pierwszego posta"
+    },
+    {
+      "title": "Drugi post",
+      "content": "Treść drugiego posta"
+    }
+  ]
+}
+
+
+### Dodanie drugiego usera z postami
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "nick_user": "nowak",
+  "posts": [
+    {
+      "title": "Post Nowaka",
+      "content": "Przykładowa treść"
+    }
+  ]
+}
+
+
+### Usuń usera po nicku razem z postami
+DELETE http://localhost:8080/users/by-nick/kowalski

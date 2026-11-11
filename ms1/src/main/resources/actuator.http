@@ -1,0 +1,1 @@
+POST http://localhost:63914/actuator/refresh

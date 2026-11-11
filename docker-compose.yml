@@ -1,0 +1,49 @@
+
+services:
+  content-postgres:
+    image: postgres:17
+    container_name: content-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: content_db
+      POSTGRES_USER: content_user
+      POSTGRES_PASSWORD: ${CONTENT_DB_PASSWORD}
+
+    ports:
+      - "127.0.0.1:5435:5432"
+
+    volumes:
+      - content_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U content_user -d content_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  recommendation-postgres:
+    image: postgres:17
+    container_name: recommendation-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: recommendation_db
+      POSTGRES_USER: recommendation_user
+      POSTGRES_PASSWORD: ${RECOMMENDATION_DB_PASSWORD}
+
+    ports:
+      - "127.0.0.1:5436:5432"
+
+    volumes:
+      - recommendation_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U recommendation_user -d recommendation_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  content_postgres_data:
+  recommendation_postgres_data:

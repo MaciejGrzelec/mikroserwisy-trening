@@ -1,0 +1,91 @@
+### feature.1
+PUT http://localhost:8080/contexts/1/properties/feature.1
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.2
+PUT http://localhost:8080/contexts/1/properties/feature.2
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.3
+PUT http://localhost:8080/contexts/1/properties/feature.3
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.4
+PUT http://localhost:8080/contexts/1/properties/feature.4
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.5
+PUT http://localhost:8080/contexts/1/properties/feature.5
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.6
+PUT http://localhost:8080/contexts/1/properties/feature.6
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.7
+PUT http://localhost:8080/contexts/1/properties/feature.7
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.8
+PUT http://localhost:8080/contexts/1/properties/feature.8
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+### feature.9
+PUT http://localhost:8080/contexts/1/properties/feature.9
+Content-Type: application/json
+
+{
+  "value": false
+}
+
+
+### feature.ALL
+PUT http://localhost:8080/contexts/1/properties
+Content-Type: application/json
+
+{
+  "properties": {
+    "feature.1": false,
+    "feature.2": false,
+    "feature.3": false,
+    "feature.4": false,
+    "feature.5": false,
+    "feature.6": false,
+    "feature.7": false,
+    "feature.8": false,
+    "feature.9": false,
+    "feature.10": false
+  }
+}
